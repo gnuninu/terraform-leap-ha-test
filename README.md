@@ -1,4 +1,4 @@
-# terraform-sles-ha-test
+# terraform-leap-ha-test
 
 Terraform project to run 2 leap15  nodes (ha nodes in future) with libvirt/KVM
 
