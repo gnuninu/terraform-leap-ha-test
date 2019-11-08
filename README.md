@@ -1,6 +1,6 @@
 # terraform-sles-ha-test
 
-Terraform project to run 2 sles nodes (ha nodes in future) with libvirt/KVM
+Terraform project to run 2 leap15  nodes (ha nodes in future) with libvirt/KVM
 
 ## Install terraform:
 
@@ -31,7 +31,7 @@ if you want to use the default for example:
 
 ## Initialise terraform provider in the project dir
 
-` nic-leap15:~/terraform_stuff/terraform-sles-ha-test> terraform init`
+` nic-leap15:~/terraform_stuff/terraform-leap15-ha-test> terraform init`
 
 ## calculate and check terraform plan before apply
 
@@ -39,7 +39,7 @@ if you want to use the default for example:
 
 ## apply
 
-` nic-leap15:~/terraform_stuff/terraform-sles-ha-test> terraform apply`
+` nic-leap15:~/terraform_stuff/terraform-leap15-ha-test> terraform apply`
 
 # check Ip nad mac given to guest
 

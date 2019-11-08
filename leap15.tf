@@ -3,14 +3,12 @@ provider "libvirt" {
   uri = "qemu:///system"
 }
 
-resource "libvirt_volume" "sles12sp3_volume" {
-  name = "sles12sp3-${count.index + 1}"
-  source = "http://download.suse.de/install/SLE-12-SP3-JeOS-GM/SLES12-SP3-JeOS-for-kvm-and-xen.x86_64-GM.qcow2"
-  #count = "${var.use_shared_resources ? 0 : (contains(var.images, "sles12sp3") ? 1 : 0)}"
+resource "libvirt_volume" "leap15_volume" {
+  name = "leap15-${count.index + 1}"
+  source = "https://download.opensuse.org/distribution/leap/15.1/jeos/openSUSE-Leap-15.1-JeOS.x86_64.qcow2"
+  #count = "${var.use_shared_resources ? 0 : (contains(var.images, "leap15") ? 1 : 0)}"
   count = 2
   pool = "KVM-images"
-  #cc_username = "UC7"
-  #cc_password = "61b9a042a2"
   format = "qcow2"
 }
 data "template_file" "user_data" {
@@ -29,8 +27,8 @@ resource "libvirt_cloudinit_disk" "commoninit_sles" {
 }
 
 # Define KVM domain to create
-resource "libvirt_domain" "sles12sp3_test" {
-  name   = "sles12sp3_test${count.index + 1}"
+resource "libvirt_domain" "leap15_test" {
+  name   = "leap15_test${count.index + 1}"
   memory = "512"
   vcpu   = 1
   count = 2
@@ -40,7 +38,7 @@ resource "libvirt_domain" "sles12sp3_test" {
   }
 
   disk {
-    volume_id = "${libvirt_volume.sles12sp3_volume[count.index].id}"
+    volume_id = "${libvirt_volume.leap15_volume[count.index].id}"
   }
 
   console {
@@ -58,5 +56,5 @@ resource "libvirt_domain" "sles12sp3_test" {
 
 # Output Server IP
 #output "ip" {
-#  value = "${libvirt_domain.sles12sp3_test.network_interface.0.addresses.0}"
+#  value = "${libvirt_domain.leap15_test.network_interface.0.addresses.0}"
 #}
