@@ -41,6 +41,12 @@ if you want to use the default for example:
 
 ` nic-leap15:~/terraform_stuff/terraform-leap15-ha-test> terraform apply`
 
-# check Ip nad mac given to guest
+## check Ip nad mac given to guest
 
 ` virsh net-dhcp-leases default`
+
+You can ssh into the guests using the root password defined in cloud_init.cfg
+
+## once you are done destroy the VMs
+
+`terraform destroy`
