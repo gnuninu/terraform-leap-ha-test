@@ -21,6 +21,7 @@ copy exacutable:
  
 https://github.com/dmacvicar/terraform-provider-libvirt/tree/master/examples/v0.12/leap15
 
+## Initialise terraform provider in the project dir
 
 ` nic-leap15:~/terraform_stuff/kvm_test> terraform init`
 
@@ -28,7 +29,7 @@ https://github.com/dmacvicar/terraform-provider-libvirt/tree/master/examples/v0.
 
 ` terraform plan`
 
-#apply
+## apply
 
 ` nic-leap15:~/terraform_stuff/kvm_test> terraform apply`
 
