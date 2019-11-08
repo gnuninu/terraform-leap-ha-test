@@ -21,7 +21,7 @@ copy exacutable:
  
 https://github.com/dmacvicar/terraform-provider-libvirt/tree/master/examples/v0.12/leap15
 
-## Make sure to change the kvm storage pool as needed in sles.tf
+## Make sure to change the kvm storage pool as needed in leap15.tf
 
 `pool = "KVM-images"`
 
