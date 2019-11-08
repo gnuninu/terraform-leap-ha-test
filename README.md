@@ -21,9 +21,17 @@ copy exacutable:
  
 https://github.com/dmacvicar/terraform-provider-libvirt/tree/master/examples/v0.12/leap15
 
+## Make sure to change the kvm storage pool as needed in sles.tf
+
+`pool = "KVM-images"`
+
+if you want to use the default for example:
+
+`pool = "default"`
+
 ## Initialise terraform provider in the project dir
 
-` nic-leap15:~/terraform_stuff/kvm_test> terraform init`
+` nic-leap15:~/terraform_stuff/terraform-sles-ha-test> terraform init`
 
 ## calculate and check terraform plan before apply
 
@@ -31,7 +39,7 @@ https://github.com/dmacvicar/terraform-provider-libvirt/tree/master/examples/v0.
 
 ## apply
 
-` nic-leap15:~/terraform_stuff/kvm_test> terraform apply`
+` nic-leap15:~/terraform_stuff/terraform-sles-ha-test> terraform apply`
 
 # check Ip nad mac given to guest
 
