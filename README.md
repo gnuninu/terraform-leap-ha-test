@@ -26,7 +26,7 @@ https://github.com/dmacvicar/terraform-provider-libvirt/tree/master/examples/v0.
 
 ## calculate and check terraform plan before apply
 
- terraform plan
+` terraform plan`
 
 #apply
 
