@@ -8,7 +8,7 @@ download it from terraform website and copy it to:
 
 ` /usr/local/bin/terraform`
 
-## Add repo ans install libvirt provider:
+## Add repo and install libvirt provider:
 
 https://software.opensuse.org/download/package?project=systemsmanagement:terraform&package=terraform-provider-libvirt
 
